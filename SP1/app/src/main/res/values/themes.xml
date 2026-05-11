@@ -1,0 +1,13 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.SmartphoneApp1" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:statusBarColor">@color/luxury_background</item>
+        <item name="android:navigationBarColor">@color/luxury_background</item>
+        <item name="colorPrimary">@color/luxury_gold</item>
+        <item name="colorSecondary">@color/luxury_gold</item>
+        <item name="colorAccent">@color/luxury_gold</item>
+    </style>
+
+    <style name="Theme.SmartphoneApp1" parent="Base.Theme.SmartphoneApp1" />
+</resources>

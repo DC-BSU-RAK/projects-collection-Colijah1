@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data />
+
+    <FrameLayout
+        android:id="@+id/splashRoot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/luxury_background"
+        tools:context=".SplashActivity">
+
+        <LinearLayout
+            android:id="@+id/splashContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:alpha="0"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:scaleX="0.88"
+            android:scaleY="0.88">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="156dp"
+                android:layout_height="156dp"
+                android:contentDescription="@string/aura_brew_logo_description"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_launcher_foreground" />
+
+            <TextView
+                android:id="@+id/splashTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:fontFamily="sans-serif-thin"
+                android:letterSpacing="0.3"
+                android:text="@string/splash_logo"
+                android:textAllCaps="true"
+                android:textColor="@color/luxury_gold"
+                android:textSize="30sp" />
+        </LinearLayout>
+    </FrameLayout>
+</layout>

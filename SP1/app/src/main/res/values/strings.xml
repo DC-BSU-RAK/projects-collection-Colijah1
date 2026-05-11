@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">Aura Brew</string>
+    <string name="splash_logo">AURA BREW</string>
+    <string name="aura_brew_logo_description">Aura Brew logo</string>
+    <string name="instructions_button_description">Open alchemist guide</string>
+    <string name="main_title">AURA BREW</string>
+    <string name="main_subtitle">Standalone Discovery Engine</string>
+    <string name="mix_station_title">Mix Station</string>
+    <string name="selection_caption">Select three elements, then let the engine synthesize the profile.</string>
+    <string name="base_liquid_hint">Base Liquid</string>
+    <string name="mixer_hint">The Mixer</string>
+    <string name="extra_hint">Aura Modifier</string>
+    <string name="ratio_card_title">Ratio Dial</string>
+    <string name="ratio_card_caption">Adjust the alchemy intensity before synthesis.</string>
+    <string name="ratio_value">1:%1$s</string>
+    <string name="brew_button">BREW &amp; DISCOVER</string>
+    <string name="synthesizing_button">SYNTESIZING...</string>
+    <string name="discovery_title">Resulting Flavor Profile</string>
+    <string name="synthesized_label">Synthesized: %1$s</string>
+    <string name="coffee_name_placeholder">Awaiting discovery</string>
+    <string name="profile_placeholder">Choose your ingredients, set the dial, then begin the extraction.</string>
+    <string name="instructions_title">THE ALCHEMIST\'S GUIDE</string>
+    <string name="instructions_step_base">1. Select your Base: Choose your core liquid.</string>
+    <string name="instructions_step_modifiers">2. Add Modifiers: Dial in your mixers and Aura extras.</string>
+    <string name="instructions_step_synthesize">3. Synthesize: Press the button to unveil a new brew identity.</string>
+    <string name="instructions_philosophy_title">Philosophy</string>
+    <string name="instructions_philosophy_body">Aura Brew is a digital alchemy experiment by Elijah P. Colendres, exploring the intersection of specialty coffee and generative UI.</string>
+    <string name="instructions_footer">Elijah P. Colendres</string>
+    <string-array name="base_liquids">
+        <item>Espresso</item>
+        <item>Filter Coffee</item>
+        <item>Cold Brew</item>
+        <item>Matcha</item>
+    </string-array>
+    <string-array name="mixers">
+        <item>Hot Water</item>
+        <item>Steamed Milk</item>
+        <item>Oat Milk</item>
+        <item>Tonic Water</item>
+        <item>Ice</item>
+    </string-array>
+    <string-array name="extras">
+        <item>Vanilla Bean</item>
+        <item>Sea Salt</item>
+        <item>Cocoa</item>
+        <item>Lavender</item>
+        <item>Honey</item>
+    </string-array>
+</resources>

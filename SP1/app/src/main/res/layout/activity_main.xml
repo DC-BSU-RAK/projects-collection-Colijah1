@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/luxury_background"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        tools:context=".MainActivity">
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutAnimation="@anim/layout_slide_up"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <FrameLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingStart="48dp"
+                    android:paddingEnd="48dp">
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:letterSpacing="0.22"
+                        android:text="@string/main_title"
+                        android:textColor="@color/luxury_text_primary"
+                        android:textSize="25sp" />
+
+                    <TextView
+                        android:id="@+id/subtitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:text="@string/main_subtitle"
+                        android:textColor="@color/luxury_gold"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/infoButton"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_gravity="top|end"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/instructions_button_description"
+                    android:padding="10dp"
+                    android:src="@android:drawable/ic_menu_info_details"
+                    app:tint="@color/luxury_gold" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/mixStationTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="34dp"
+                android:fontFamily="sans-serif"
+                android:letterSpacing="0.14"
+                android:text="@string/mix_station_title"
+                android:textColor="@color/luxury_text_primary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/selectionCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                app:cardBackgroundColor="@color/luxury_card"
+                app:cardCornerRadius="26dp"
+                app:cardElevation="8dp"
+                app:strokeColor="@color/luxury_gold_soft"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/mix_station_title"
+                        android:textColor="@color/luxury_text_primary"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/selection_caption"
+                        android:textColor="@color/luxury_text_secondary"
+                        android:textSize="13sp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/baseLiquidLayout"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:hint="@string/base_liquid_hint"
+                        app:boxBackgroundColor="@color/luxury_surface"
+                        app:boxCornerRadiusBottomEnd="28dp"
+                        app:boxCornerRadiusBottomStart="28dp"
+                        app:boxCornerRadiusTopEnd="28dp"
+                        app:boxCornerRadiusTopStart="28dp"
+                        app:boxStrokeColor="@color/text_field_stroke"
+                        app:hintTextColor="@color/text_field_hint">
+
+                        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                            android:id="@+id/baseLiquidDropdown"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:inputType="none"
+                            android:textColor="@color/luxury_text_primary"
+                            android:textSize="16sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/mixerLayout"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:hint="@string/mixer_hint"
+                        app:boxBackgroundColor="@color/luxury_surface"
+                        app:boxCornerRadiusBottomEnd="28dp"
+                        app:boxCornerRadiusBottomStart="28dp"
+                        app:boxCornerRadiusTopEnd="28dp"
+                        app:boxCornerRadiusTopStart="28dp"
+                        app:boxStrokeColor="@color/text_field_stroke"
+                        app:hintTextColor="@color/text_field_hint">
+
+                        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                            android:id="@+id/mixerDropdown"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:inputType="none"
+                            android:textColor="@color/luxury_text_primary"
+                            android:textSize="16sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/extraLayout"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:hint="@string/extra_hint"
+                        app:boxBackgroundColor="@color/luxury_surface"
+                        app:boxCornerRadiusBottomEnd="28dp"
+                        app:boxCornerRadiusBottomStart="28dp"
+                        app:boxCornerRadiusTopEnd="28dp"
+                        app:boxCornerRadiusTopStart="28dp"
+                        app:boxStrokeColor="@color/text_field_stroke"
+                        app:hintTextColor="@color/text_field_hint">
+
+                        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                            android:id="@+id/extraDropdown"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:inputType="none"
+                            android:textColor="@color/luxury_text_primary"
+                            android:textSize="16sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/ratioCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                app:cardBackgroundColor="@color/luxury_card"
+                app:cardCornerRadius="26dp"
+                app:cardElevation="8dp"
+                app:strokeColor="@color/luxury_gold_soft"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/ratio_card_title"
+                        android:textColor="@color/luxury_text_primary"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/ratio_card_caption"
+                        android:textColor="@color/luxury_text_secondary"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/ratioValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:textColor="@color/luxury_gold"
+                        android:textSize="34sp"
+                        android:textStyle="bold"
+                        tools:text="1:16" />
+
+                    <com.google.android.material.slider.Slider
+                        android:id="@+id/ratioSlider"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:stepSize="1"
+                        android:value="16"
+                        android:valueFrom="1"
+                        android:valueTo="25"
+                        app:haloColor="@color/luxury_gold_soft"
+                        app:labelBehavior="withinBounds"
+                        app:thumbColor="@color/luxury_gold"
+                        app:trackColorActive="@color/luxury_gold"
+                        app:trackColorInactive="@color/luxury_gold_soft" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/brewButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="sans-serif"
+                android:minHeight="58dp"
+                android:text="@string/brew_button"
+                android:textColor="@color/luxury_background"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/luxury_gold"
+                app:cornerRadius="28dp"
+                app:rippleColor="@color/luxury_gold_soft" />
+
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/synthProgress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:max="100"
+                android:progress="0"
+                android:visibility="gone"
+                app:indicatorColor="@color/luxury_gold"
+                app:trackCornerRadius="8dp"
+                app:trackColor="@color/luxury_glass"
+                tools:visibility="visible" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/discoveryCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="30dp"
+                android:visibility="gone"
+                app:cardBackgroundColor="@color/luxury_surface"
+                app:cardCornerRadius="26dp"
+                app:cardElevation="12dp"
+                app:strokeColor="@color/luxury_gold"
+                app:strokeWidth="1dp"
+                tools:visibility="visible">
+
+                <FrameLayout
+                    android:id="@+id/discoverySurface"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <View
+                        android:id="@+id/shimmerView"
+                        android:layout_width="72dp"
+                        android:layout_height="match_parent"
+                        android:alpha="0"
+                        android:background="@color/luxury_gold_soft"
+                        tools:alpha="0.35" />
+
+                    <LinearLayout
+                        android:id="@+id/discoveryContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="24dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:letterSpacing="0.12"
+                            android:text="@string/discovery_title"
+                            android:textColor="@color/luxury_text_primary"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/coffeeName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="18dp"
+                            android:alpha="0"
+                            android:fontFamily="sans-serif"
+                            android:text="@string/coffee_name_placeholder"
+                            android:textColor="@color/luxury_gold"
+                            android:textSize="29sp"
+                            android:textStyle="bold"
+                            tools:alpha="1" />
+
+                        <TextView
+                            android:id="@+id/ingredientSummary"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="sans-serif"
+                            android:textColor="@color/luxury_gold"
+                            android:textSize="14sp"
+                            tools:text="Synthesized: 1 Part Espresso, 4 Parts Oat Milk, 1 Hint of Sea Salt." />
+
+                        <TextView
+                            android:id="@+id/flavorProfile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="sans-serif"
+                            android:lineSpacingExtra="4dp"
+                            android:text="@string/profile_placeholder"
+                            android:textColor="@color/luxury_text_secondary"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </FrameLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>
