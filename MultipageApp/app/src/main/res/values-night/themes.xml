@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.MultipageApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="colorPrimary">@color/focus_mint</item>
+        <item name="colorPrimaryContainer">@color/glass_panel</item>
+        <item name="colorSecondary">@color/focus_lavender</item>
+        <item name="colorSurface">@color/focus_ink</item>
+        <item name="colorSurfaceVariant">@color/noir_card</item>
+        <item name="colorOnSurface">@color/soft_white</item>
+        <item name="colorOnSurfaceVariant">@color/muted_text</item>
+        <item name="android:statusBarColor">@color/focus_ink</item>
+        <item name="android:navigationBarColor">@color/focus_midnight</item>
+    </style>
+</resources>

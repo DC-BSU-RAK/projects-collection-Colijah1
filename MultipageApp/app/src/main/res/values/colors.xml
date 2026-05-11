@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="noir">#121212</color>
+    <color name="noir_panel">#1A1A1A</color>
+    <color name="noir_card">#202020</color>
+    <color name="star_fire_gold">#D4AF37</color>
+    <color name="ether_blue">#58D5FF</color>
+    <color name="aura_cyan">#70F7FF</color>
+    <color name="soft_white">#F8F4E8</color>
+    <color name="muted_text">#B8B0A0</color>
+    <color name="gold_soft">#33D4AF37</color>
+    <color name="glass_panel">#22FFFFFF</color>
+    <color name="electric_cyan">#39E7FF</color>
+    <color name="cyan_soft">#3339E7FF</color>
+    <color name="focus_midnight">#101624</color>
+    <color name="focus_ink">#0B1020</color>
+    <color name="focus_purple">#7C5CFF</color>
+    <color name="focus_lavender">#A99CFF</color>
+    <color name="focus_mint">#69F0C7</color>
+    <color name="focus_surface_light">#F7F5FF</color>
+    <color name="focus_text_dark">#172033</color>
+</resources>
